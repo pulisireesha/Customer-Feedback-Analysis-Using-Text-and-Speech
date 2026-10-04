@@ -1,0 +1,372 @@
+css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+        );
+
+    display: flex;
+    justify-content: center;
+
+    padding: 30px 15px;
+}
+
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+
+/* Main Card */
+
+.main-card {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.2);
+}
+
+
+/* Sections */
+
+.feedback-section,
+.voice-section,
+.rating-section,
+.result-section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+
+    margin-bottom: 15px;
+}
+
+
+/* Text Area */
+
+textarea {
+    width: 100%;
+
+    height: 160px;
+
+    padding: 15px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 12px;
+
+    resize: none;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #667eea;
+}
+
+
+/* Buttons */
+
+button {
+    padding: 12px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #4c5bd4;
+
+    transform: translateY(-2px);
+}
+
+
+/* Button Area */
+
+.buttons {
+    margin-top: 10px;
+}
+
+.clear-btn {
+    background: #555;
+
+    margin-left: 8px;
+}
+
+.clear-btn:hover {
+    background: #333;
+}
+
+
+/* Voice Section */
+
+.voice-section {
+    text-align: center;
+
+    padding: 25px;
+
+    border: 2px dashed #ddd;
+
+    border-radius: 12px;
+}
+
+.voice-section p {
+    color: #555;
+
+    margin: 10px;
+}
+
+.voice-btn {
+    background: #e74c3c;
+}
+
+.voice-btn:hover {
+    background: #c0392b;
+}
+
+#voiceText {
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+/* Rating */
+
+.rating-section {
+    text-align: center;
+}
+
+.stars {
+    font-size: 45px;
+
+    cursor: pointer;
+
+    margin: 10px;
+}
+
+.stars span {
+    color: #ccc;
+
+    transition: 0.2s;
+}
+
+.stars span:hover {
+    color: #f1c40f;
+}
+
+.stars span.active {
+    color: #f1c40f;
+}
+
+#ratingText {
+    color: #555;
+
+    font-size: 16px;
+}
+
+
+/* Result */
+
+.result-section {
+    text-align: center;
+
+    background: #f7f7f7;
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+#sentimentIcon {
+    font-size: 70px;
+
+    margin: 15px;
+}
+
+#sentimentResult {
+    font-size: 28px;
+
+    color: #333;
+}
+
+#sentimentMessage {
+    margin-top: 10px;
+
+    color: #666;
+}
+
+
+/* Score */
+
+.score-container {
+    margin-top: 25px;
+}
+
+.score-container p {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.progress {
+    width: 100%;
+
+    height: 15px;
+
+    background: #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+#scoreBar {
+    width: 0%;
+
+    height: 100%;
+
+    background: #667eea;
+
+    transition: width 0.5s;
+}
+
+
+/* Summary */
+
+.summary {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #ddd;
+}
+
+.summary h3 {
+    margin-bottom: 12px;
+
+    color: #333;
+}
+
+.summary p {
+    margin: 8px;
+
+    color: #555;
+}
+
+
+/* Examples */
+
+.examples {
+    background: white;
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.examples button {
+    margin: 5px;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+
+    color: white;
+
+    margin-top: 25px;
+
+    line-height: 1.8;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .main-card {
+        padding: 20px;
+    }
+
+    textarea {
+        height: 130px;
+    }
+
+    #sentimentIcon {
+        font-size: 55px;
+    }
+
+    #sentimentResult {
+        font-size: 23px;
+    }
+
+    .stars {
+        font-size: 35px;
+    }
+}

@@ -1,0 +1,215 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Feedback Analysis</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <header>
+        <h1>📊 Customer Feedback Analysis</h1>
+
+        <p>
+            Analyze customer feedback using Text and Speech
+        </p>
+    </header>
+
+
+    <!-- Main Card -->
+
+    <div class="main-card">
+
+        <!-- Text Feedback -->
+
+        <section class="feedback-section">
+
+            <h2>📝 Enter Customer Feedback</h2>
+
+            <textarea
+                id="feedbackText"
+                placeholder="Example: The product is excellent and the service was very good!"
+            ></textarea>
+
+            <div class="buttons">
+
+                <button onclick="analyzeFeedback()">
+                    🔍 Analyze Feedback
+                </button>
+
+                <button class="clear-btn" onclick="clearFeedback()">
+                    Clear
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Voice Feedback -->
+
+        <section class="voice-section">
+
+            <h2>🎤 Voice Feedback</h2>
+
+            <p id="voiceStatus">
+                Click the button and speak your feedback
+            </p>
+
+            <button
+                class="voice-btn"
+                onclick="startVoiceRecognition()">
+                🎤 Start Voice
+            </button>
+
+            <p id="voiceText"></p>
+
+        </section>
+
+
+        <!-- Rating -->
+
+        <section class="rating-section">
+
+            <h2>⭐ Customer Rating</h2>
+
+            <div class="stars">
+
+                <span onclick="setRating(1)">★</span>
+                <span onclick="setRating(2)">★</span>
+                <span onclick="setRating(3)">★</span>
+                <span onclick="setRating(4)">★</span>
+                <span onclick="setRating(5)">★</span>
+
+            </div>
+
+            <p id="ratingText">
+                Select a rating
+            </p>
+
+        </section>
+
+
+        <!-- Result -->
+
+        <section class="result-section">
+
+            <h2>📈 Analysis Result</h2>
+
+            <div id="sentimentIcon">
+                😊
+            </div>
+
+            <h3 id="sentimentResult">
+                Result will appear here
+            </h3>
+
+            <p id="sentimentMessage">
+                Enter customer feedback to analyze it.
+            </p>
+
+
+            <!-- Score -->
+
+            <div class="score-container">
+
+                <p>
+                    Sentiment Score:
+                    <strong id="score">0%</strong>
+                </p>
+
+                <div class="progress">
+
+                    <div id="scoreBar"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feedback Summary -->
+
+            <div class="summary">
+
+                <h3>📋 Feedback Summary</h3>
+
+                <p>
+                    Positive Words:
+                    <strong id="positiveCount">0</strong>
+                </p>
+
+                <p>
+                    Negative Words:
+                    <strong id="negativeCount">0</strong>
+                </p>
+
+                <p>
+                    Customer Rating:
+                    <strong id="customerRating">Not selected</strong>
+                </p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- Example Feedback -->
+
+    <div class="examples">
+
+        <h2>Try Sample Feedback</h2>
+
+        <button onclick="useExample(
+            'The product is excellent and the customer service was amazing!'
+        )">
+            😊 Positive
+        </button>
+
+        <button onclick="useExample(
+            'The product is okay and the delivery was normal.'
+        )">
+            😐 Neutral
+        </button>
+
+        <button onclick="useExample(
+            'The product is very bad and the service was terrible.'
+        )">
+            😞 Negative
+        </button>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Customer Feedback Analysis System
+        </p>
+
+        <p>
+            Text + Speech Analysis | Mini Project
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
